@@ -1,5 +1,6 @@
 package com.example.week_eleven;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -7,6 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SuppressWarnings("unused")
 public class CalculatorTest {
     private CalculatorService calculatorService;
+
+    @BeforeEach
+    public void setUp() {
+        calculatorService = new CalculatorService();
+    }
 
     @Test
     public void testSum() {
